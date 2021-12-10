@@ -15,7 +15,6 @@ const App = (props)=> {
     fetchSmurfs();
   }, []);
 
-
   return (
 
     <div className="App">
