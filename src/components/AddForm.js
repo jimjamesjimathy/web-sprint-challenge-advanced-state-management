@@ -14,7 +14,7 @@ const AddForm = (props) => {
     const handleChange = e => {
         setState({
             ...state,
-            [e.target.name]:e.target.value
+            [e.target.name]: e.target.value
         });
     }
 
@@ -55,7 +55,6 @@ const AddForm = (props) => {
         </form>
     </section>);
 }
-
 
 export default connect(null, { addSmurf, setError, errorMessage })(AddForm);
 

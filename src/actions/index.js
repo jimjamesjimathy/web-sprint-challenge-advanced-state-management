@@ -8,6 +8,7 @@ export const FETCH_ERROR = 'FETCH_ADD_ERROR_VALUE';
 export const ERROR_MESSAGE = 'ERROR_MESSAGE';
  
 
+
 export const fetchSmurfs = () => {
     return(dispatch) => {
         dispatch(fetchStart());
@@ -24,10 +25,10 @@ export const fetchSmurfs = () => {
 export const addSmurf = (newSmurf) => {
     return(dispatch) => {
         axios.post('http://localhost:3333/smurfs', {
-            name: newSmurf.name,
-            position: newSmurf.position,
-            nickname: newSmurf.nickname,
-            description: newSmurf.description
+                name: newSmurf.name,
+                position: newSmurf.position,
+                nickname: newSmurf.nickname,
+                description: newSmurf.description
             })
             .then(res =>{
                 dispatch(fetchSuccess(res.data));

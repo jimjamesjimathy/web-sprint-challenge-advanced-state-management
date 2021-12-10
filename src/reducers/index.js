@@ -8,7 +8,7 @@ import { FETCH_FAIL,
 
 export const initialState = {
     smurf: [
-            {
+        {
             isLoading: false,
             error: '',
             id:"",
@@ -16,12 +16,13 @@ export const initialState = {
             position:' ',
             nickname: '',
             description: ''
-            }
+        }
     ],
-
     isLoading: false,
     error: ''
 }
+
+
 
 const reducer = (state = initialState, action) =>{
     switch(action.type) {

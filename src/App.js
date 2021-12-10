@@ -4,9 +4,10 @@ import AddForm from './components/AddForm';
 import SmurfList from './components/SmurfList';
 import Header from './components/Header';
 import { fetchSmurfs } from './actions/index';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
+
+
 
 const App = (props)=> {
   const { fetchSmurfs } = props;
@@ -16,10 +17,8 @@ const App = (props)=> {
   }, []);
 
   return (
-
     <div className="App">
       <Header />
-
       <main>
         <SmurfList/>
         <AddForm/>
