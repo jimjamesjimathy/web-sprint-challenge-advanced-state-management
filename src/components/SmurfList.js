@@ -14,10 +14,10 @@ const SmurfList = (props)=> {
 }
 //export default SmurfList;
 const mapStateToProps = (state) => {
-    console.log('list state',state)
+
     return {
-        smurf:state.smurf,
-        isLoading:state.isLoading
+        smurf: state.smurf,
+        isLoading: state.isLoading
     }    
 }
 

@@ -5,7 +5,8 @@ export const FETCH_SUCCESS = 'FETCH_SUCCESS';
 export const FETCH_FAIL = 'FETCH_FAIL';
 export const FETCH_ADD = 'FETCH_ADD';
 export const FETCH_ERROR = 'FETCH_ADD_ERROR_VALUE';
-
+export const ERROR_MESSAGE = 'ERROR_MESSAGE';
+ 
 
 export const fetchSmurfs = () => {
     return(dispatch) => {
@@ -37,20 +38,24 @@ export const addSmurf = (newSmurf) => {
     }
 }
 
-export const fetchStart =()=>{
+export const fetchStart = () => {
     return ({type: FETCH_START});
 }
 
-export const fetchSuccess =(smurf)=>{
+export const fetchSuccess = (smurf) => {
     return ({type: FETCH_SUCCESS, payload: smurf})
 }
 
-export const fetchFail =(error)=>{
+export const fetchFail = (error) => {
     return ({type: FETCH_FAIL, payload: error})
 }
 
-export const setError = (err)=>{
+export const setError = (err) => { 
     return({type: FETCH_ERROR, payload: err})
+}
+
+export const errorMessage = (errorMessage) => {
+    return({type: ERROR_MESSAGE, payload: errorMessage})
 }
 
 //Task List:
